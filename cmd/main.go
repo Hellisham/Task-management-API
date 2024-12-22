@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/Hellisham/task_manager/internal/database"
+	task "github.com/Hellisham/task_manager/internal/models"
+)
 
 func main() {
-	fmt.Println("main-go")
+	database := db.Connect()
+	err := database.AutoMigrate(&task.Task{})
+	if err != nil {
+		panic(err)
+	}
 }

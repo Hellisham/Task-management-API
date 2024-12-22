@@ -4,6 +4,6 @@ import "gorm.io/gorm"
 
 type Task struct {
 	gorm.Model
-	Title       string
-	Discribtion string
+	Title      string
+	Discretion string
 }
