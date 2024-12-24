@@ -15,7 +15,7 @@ func NewTaskService(db *gorm.DB) *TaskService {
 	}
 }
 
-func (service *TaskService) GetAllTasks() ([]task.Task, error) {
+func (service *TaskService) GetAllTasksService() ([]task.Task, error) {
 	var tasks []task.Task
 	service.DB.Find(&tasks)
 	if service.DB.Error != nil {
